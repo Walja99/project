@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a href="#" class="navbar-brand">
-            <img src="https://cdn.icon-icons.com/icons2/2284/PNG/512/cactus_flower_plant_nature_flower_pot_planter_garden_icon_141181.png" width=30 alt="logo">
+            <img src="http://qrcoder.ru/code/?https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1e9qxJaz3bzjxznJ1CI-hcje5vT56X4yy%2Fview&4&0" width=30 alt="logo">
             <a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
@@ -33,7 +33,7 @@
                       <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal3">Создание мероприятия</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal3">Ближайшие события</a>
+                      <a href="#nearEvent" class="nav-link">Ближайшие события</a>
                     </li>
                     <li class="nav-item">
                       <a href="maineng.html" class="nav-link">Eng</a>
@@ -52,18 +52,18 @@
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://oratoris.ru/wp-content/uploads/2018/03/master-klass-po-liderskim-navykam-i-oratorskomu-masterstvu-1024x577.jpg" alt="" class="d-block w-100">
+              <img src="img/img1.jpg" alt="" class="d-block w-100">
             </div>
             <div class="carousel-item">
-              <img src="http://www.ksaa.zaural.ru/images/stories/photo/2017/01/2386.jpg" alt="" class="d-block w-100">
+              <img src="img/img2.jpg" alt="" class="d-block w-100">
             </div>
             <div class="carousel-item">
-              <img src="http://lim.lviv.ua/images/phocagallery/Rizne2017/Library/conference.jpg" alt="" class="d-block w-100">
+              <img src="img/img3.jpg" alt="" class="d-block w-100">
             </div>
           </div>
           <a href="#carouselExampleIndicators" class="carousel-control-prev" role="button" data-slide="prev">
@@ -154,12 +154,13 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+            <form novalidate>
           <div class="modal-body">
             <div class="container-fluid"
-              <form>
+
                 <div class="form-froup">
                   <label for="exampleInputEmail">Email adress</label>
-                  <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email" aria-describedby="emailHelp">
+                  <input type="text" class="form-control" id="exampleInputEmail" placeholder="Email" aria-describedby="emailHelp">
                   <small id="emailHelp" class="form-text text-muted">Enter your email</small>
                 </div>
                 <div class="form-froup">
@@ -173,12 +174,14 @@
                     Запомнить меня
                   </label>
                 </div>
-              </form>
+
             </div>
-          </div>
+
           <div class="modal-footer">
             <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal2">Регистрация</a>
-            <button type="submit" class="btn btn-primary">Отправить</button>
+            <button type="button"  id="sendMail" class="btn btn-primary">Отправить</button>
+          </div>
+          </form>
           </div>
         </div>
       </div>
@@ -312,17 +315,22 @@
   </div>
     </div>
 
-    
-
+<div id="nearEvent" class="container-fluid" style="background-color: #eee">
+  <div class="container pt-5">
+    <div class="row justify-content-center" id="id1">
+    </div>
+  </div>
+</div>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="script.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script.js" ></script>
+<script src="script2.js" ></script>
 </body>
 
 </html>
