@@ -1,12 +1,22 @@
-var element = document.getElementById("id1");
+var element = document.getElementById("events");
 for (let i=0; i < 6; i++){
 var div_card = document.createElement('div');
-div_card.className = "card col-md-4 col-lg-3 mb-3";
-div_card.innerHTML = "<div class='card-body'><h4 class='card-title'>Мероприятие "+(i+1)+"</h4> <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><a href='#' class='btn btn-primary'>Зарегаться</a></div>";
-element.appendChild(div_card);
+if (element.className == "row justify-content-center eng"){
+div_card.innerHTML = "<div class='card-body'><h4 class='card-title'>Event "+(i+1)+"</h4> <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><a href='#' class='btn btn-primary'>Take part</a></div>";
 }
-
-
+else{
+div_card.innerHTML = "<div class='card-body'><h4 class='card-title'>Мероприятие "+(i+1)+"</h4> <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><a href='#' class='btn btn-primary'>Зарегаться</a></div>";
+}
+div_card.className = "card col-md-4 col-lg-3 mb-3";
+element.appendChild(div_card);
+};
+var element = document.getElementById("choose");
+for (let i=0; i < 6; i++){
+var option = document.createElement('option');
+option.value = i+1;
+option.innerHTML = i+1;
+element.appendChild(option);
+}
 (function() {
   'use strict';
 
