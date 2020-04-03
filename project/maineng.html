@@ -107,7 +107,7 @@
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <label for="startTime">Start time</label>
-                                    <input type="datetime-local" class="form-control" id="startTime" placeholder="Start time" required>
+                                    <input type="date" class="form-control" id="startTime" placeholder="Start time" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="endTime">End time</label>
-                                    <input type="datetime-local" class="form-control" id="endTime" placeholder="End time" required>
+                                    <input type="date" class="form-control" id="endTime" placeholder="End time" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -125,6 +125,9 @@
                                         Please provide a valid time.
                                     </div>
                                 </div>
+                            </div>
+                            <div class="modal-footer">
+                                  <button type="button" id="crTime" class="btn btn-primary">Agree</button>
                             </div>
                             <div class="form-froup">
                                 <label for="place">Place</label>
@@ -150,7 +153,7 @@
                         </div>
                         <div class="modal-footer">
                             <a href="" class="nav-link" data-toggle="modal" data-target="#authorization">Log in</a>
-                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="submit" id="crEvent" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </form>

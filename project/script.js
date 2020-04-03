@@ -9,23 +9,26 @@ div_card.innerHTML = "<div class='card-body'><h4 class='card-title'>Меропр
 }
 div_card.className = "card col-md-4 col-lg-3 mb-3";
 element.appendChild(div_card);
-};
-
-var startTime = $("#startTime").val().trim();
-var stopTime = $("#stopTime").val().trim();
-$.ajax({ type: "GET",
-url: "http://localhost:8080/booths/available?from="+startTime+"&to="+stopTime,
-success: function(data2){
-    list = data2;
 }
+$("#crTime").on("click", function(){
+var adr="http://localhost:8080/booths/available?from="+document.getElementById("startTime").value+"&to="+document.getElementById("endTime").value;
+var co;
+$.ajax(
+  { type: "GET",
+  url: adr,
+  success: function(data2){
+      co = data2;
+  }
+    });
+    var element = document.getElementById("choose");
+    for (let i=0; i < co; i++){
+    var option = document.createElement('option');
+    option.value = i+1;
+    option.innerHTML = i+1;
+    element.appendChild(option);}
+});
 
-var element = document.getElementById("choose");
-for (let i=0; i < list.length; i++){
-var option = document.createElement('option');
-option.value = i+1;
-option.innerHTML = i+1;
-element.appendChild(option);
-}
+
 if (localStorage.getItem("user_id")){
   document.getElementById("aut").style="display : none";
   document.getElementById("exit").style="display : inline";
@@ -68,13 +71,4 @@ else {
       }, false);
     });
   }, false);
-})();
-(function(){
-  var element = document.getElementById('justify-content-center');
-  var link = document.createElement('a');
-  var br = document.createElement('br');
-  link.immerHTML = 'Go to google';
-  link.href = "http://google.com";
-  element.appendChild(br);
-  element.appendChild(link);
 })();

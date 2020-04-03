@@ -4,7 +4,6 @@ $("#sendMail").on("click", function(){
   var pass = $("#password").val().trim();
 var data = new Object();
 data.username = email;
-user_id = email;
 data.userPassword = pass;
 data = JSON.stringify(data);
   $.ajax({ type: "POST",
@@ -16,13 +15,16 @@ data = JSON.stringify(data);
     }
 
   });
-  localStorage.setItem("user_id", user_id);
+
 });
 
 $("#crEvent").on("click", function(){
+  if (!localStorage.getItem("user_id")){
+    alert("Aвторизируйтесь")}
+    else{
   var name = $("#name").val().trim();
   var startTime = $("#startTime").val().trim();
-  var stopTime = $("#stopTime").val().trim();
+  var stopTime = $("#endTime").val().trim();
   var place = $("#place").val().trim();
   var num = $("#num").val().trim();
 var data = new Object();
@@ -31,20 +33,20 @@ data.orgId = user_id;
 data.startTime = startTime;
 data.endTime = endTime;
 data.place = place;
-data.booths = list[0:num];
+data.count = num;
 data = JSON.stringify(data);
   $.ajax({ type: "POST",
   url: "http://localhost:8080/event/create",
    data: data,
    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json; charset=UTF-8' } ,
   });
-
+}
 });
-
 $("#exit").on("click", function(){
   localStorage.removeItem("user_id");
   });
-for (let i=0; i < 6; i++){
+
+for (let i=0; i < 22; i++){
 $("#btn_regevent"+(i+1)).on("click", function(){
   if (!localStorage.getItem("user_id")){
     alert("Авторизируйтесь")
