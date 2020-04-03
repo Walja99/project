@@ -1,5 +1,5 @@
 var element = document.getElementById("events");
-for (let i=0; i < 6; i++){
+for (let i=0; i < 22; i++){
 var div_card = document.createElement('div');
 if (element.className == "row justify-content-center eng"){
 div_card.innerHTML = "<div class='card-body'><h4 class='card-title'>Event "+(i+1)+"</h4> <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><a href='' id='btn_regevent"+(i+1)+"' class='btn btn-primary "+(i+1)+"'>Take part</a></div>";
@@ -10,8 +10,17 @@ div_card.innerHTML = "<div class='card-body'><h4 class='card-title'>Меропр
 div_card.className = "card col-md-4 col-lg-3 mb-3";
 element.appendChild(div_card);
 };
+
+var startTime = $("#startTime").val().trim();
+var stopTime = $("#stopTime").val().trim();
+$.ajax({ type: "GET",
+url: "http://localhost:8080/booths/available?from="+startTime+"&to="+stopTime,
+success: function(data2){
+    list = data2;
+}
+
 var element = document.getElementById("choose");
-for (let i=0; i < 6; i++){
+for (let i=0; i < list.length; i++){
 var option = document.createElement('option');
 option.value = i+1;
 option.innerHTML = i+1;

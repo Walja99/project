@@ -95,7 +95,7 @@
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="form-froup">
-                                <label for="validationCustomName">Name</label>
+                                <label for="name">Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Name" required>
                                 <div class="valid-feedback">
                                     Looks good!
@@ -116,14 +116,24 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="stopTime">End time</label>
-                                    <input type="datetime-local" class="form-control" id="stopTime" placeholder="End time" required>
+                                    <label for="endTime">End time</label>
+                                    <input type="datetime-local" class="form-control" id="endTime" placeholder="End time" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                     <div class="invalid-feedback">
                                         Please provide a valid time.
                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-froup">
+                                <label for="place">Place</label>
+                                <input type="text" class="form-control" id="place" placeholder="Place" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a valid place.
                                 </div>
                             </div>
                             <div class="form-froup  mb-3">
@@ -139,8 +149,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#authorization">Log in</a>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="" class="nav-link" data-toggle="modal" data-target="#authorization">Log in</a>
+                            <button type="button" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </form>

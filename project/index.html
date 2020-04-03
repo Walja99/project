@@ -95,7 +95,7 @@
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="form-froup">
-                                <label for="validationCustomName">Название</label>
+                                <label for="name">Название</label>
                                 <input type="text" class="form-control" id="name" placeholder="Название" required>
                                 <div class="valid-feedback">
                                     Отлично!
@@ -107,7 +107,7 @@
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <label for="startTime">Время начала</label>
-                                    <input type="datetime-local" class="form-control" id="startTime" placeholder="Время начала" required>
+                                    <input type="date" class="form-control" id="startTime" placeholder="Время начала" required>
                                     <div class="valid-feedback">
                                         Отлично!
                                     </div>
@@ -116,14 +116,24 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="stopTime">Время конца</label>
-                                    <input type="datetime-local" class="form-control" id="stopTime" placeholder="Время конца" required>
+                                    <label for="endTime">Время конца</label>
+                                    <input type="date" class="form-control" id="endTime" placeholder="Время конца" required>
                                     <div class="valid-feedback">
                                         Отлично!
                                     </div>
                                     <div class="invalid-feedback">
                                         Введите время конца.
                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-froup">
+                                <label for="place">Место</label>
+                                <input type="text" class="form-control" id="place" placeholder="Место" required>
+                                <div class="valid-feedback">
+                                    Отлично!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Введите место.
                                 </div>
                             </div>
                             <div class="form-froup  mb-3">
@@ -139,8 +149,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#authorization">Авторизация</a>
-                            <button type="submit" class="btn btn-primary">Отправить</button>
+                            <a href="" class="nav-link" data-toggle="modal" data-target="#authorization">Авторизация</a>
+                            <button type="button" id="crEvent" class="btn btn-primary">Отправить</button>
                         </div>
                     </div>
                 </form>
