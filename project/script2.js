@@ -10,7 +10,8 @@ data = JSON.stringify(data);
   url: "http://localhost:8080/user/authenticate",
    data: data,
    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json; charset=UTF-8' } ,
-    success: function(id){
+    success: function(token, id){
+      localStorage.setItem("token", token);
       localStorage.setItem("user_id", id);
     }
 
