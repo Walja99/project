@@ -67,7 +67,7 @@ data.password = password;
 data.firstName = firstName;
 data.secondName = secondName;
 data.rank = rank;
-
+data.sex = sex;
 data.birth = birth;
 data.phoneNumber = phoneNumber;
 data.organization = organisation;
