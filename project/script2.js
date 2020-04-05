@@ -52,15 +52,12 @@ data = JSON.stringify(data);
 });
 
 $("#rege").on("click", function(){
-  alert('ggg');
-      var email =  $("#email").val().trim();
+  var email =  $("#email").val().trim();
   var firstName = $("#firstName").val().trim();
   var password = $("#pass").val().trim();
   var secondName = $("#lastName").val().trim();
   var rank = "jjjjj";
-  if ($("#m").val().trim()){  var sex = "m";}
-  if ($("#f").val().trim()){  var sex = "f";}
-
+  var sex = "m";
   var birth = $("#birthDate").val().trim();
   var phoneNumber = $("#phone").val().trim();
   var organisation = $("#org").val().trim();
@@ -70,10 +67,12 @@ data.password = password;
 data.firstName = firstName;
 data.secondName = secondName;
 data.rank = rank;
+
 data.birth = birth;
 data.phoneNumber = phoneNumber;
-data.organisation = organisation;
+data.organization = organisation;
 data = JSON.stringify(data);
+
   $.ajax({ type: "POST",
   url: "http://localhost:8080/create_user",
    data: data,
