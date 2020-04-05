@@ -11,13 +11,20 @@ div_card.className = "card col-md-4 col-lg-3 mb-3";
 element.appendChild(div_card);
 }
 $("#crTime").on("click", function(){
-var adr="http://localhost:8080/booths/available?from="+document.getElementById("startTime").value+"&to="+document.getElementById("endTime").value;
+var adr="http://localhost:8080/booths/available";
 var co;
+var startTime = $("#startTime").val().trim();
+var endTime = $("#endTime").val().trim();
+var data = new Object();
+data.startTime = startTime;
+data.endTime = endTime;
+data = JSON.stringify(data);
 $.ajax(
   { type: "GET",
   url: adr,
+  data: data,
   success: function(data2){
-      co = data2;
+      co = data2.count;
   }
     });
     var element = document.getElementById("choose");
