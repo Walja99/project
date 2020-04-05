@@ -19,13 +19,14 @@ var data = new Object();
 data.startTime = startTime;
 data.endTime = endTime;
 data = JSON.stringify(data);
+tok="Bearer"+localStorage.getItem("token");
 $.ajax(
   { type: "GET",
   url: adr,
   data: data,
   headers: { 'Accept': 'application/json',
   'Content-Type': 'application/json; charset=UTF-8',
-'X-Authorization': localStorage.getItem("token")} ,
+'X-Authorization': tok} ,
   success: function(data2){
       co = data2.count;
   }

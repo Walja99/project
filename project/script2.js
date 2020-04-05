@@ -33,20 +33,21 @@ $("#crEvent").on("click", function(){
   var endTime = $("#endTime").val().trim();
   var place = $("#place").val().trim();
   var num = $("#choose").val().trim();
-var data = new Object();
-data.name = name;
-data.orgId = user_id;
-data.startTime = startTime;
-data.endTime = endTime;
-data.place = place;
-data.booths = num;
-data = JSON.stringify(data);
+var data2 = new Object();
+data2.name = name;
+data2.orgId = localStorage.getItem("user_id");
+data2.startTime = startTime;
+data2.endTime = endTime;
+data2.place = place;
+data2.booths = num;
+data2 = JSON.stringify(data2);
+tok="Bearer"+localStorage.getItem("token");
   $.ajax({ type: "POST",
   url: "http://localhost:8080/event/create",
-   data: data,
+   data: data2,
    headers: { 'Accept': 'application/json',
    'Content-Type': 'application/json; charset=UTF-8',
- 'X-Authorization': localStorage.getItem("token")} ,
+ 'X-Authorization': tok} ,
   });
 }
 });
