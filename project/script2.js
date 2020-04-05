@@ -17,10 +17,11 @@ data = JSON.stringify(data);
     },
     error: function(t){
       localStorage.setItem("user_id", "error");
+
     }
 
   });
-
+alert("для отладки")
 });
 
 $("#crEvent").on("click", function(){
