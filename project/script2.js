@@ -73,7 +73,7 @@ data.phoneNumber = phoneNumber;
 data.organisation = organisation;
 data = JSON.stringify(data);
   $.ajax({ type: "POST",
-  url: "http://localhost:8080/event/create",
+  url: "http://localhost:8080/create_user",
    data: data,
    headers: { 'Accept': 'application/json',
    'Content-Type': 'application/json; charset=UTF-8'
