@@ -52,7 +52,7 @@ data = JSON.stringify(data);
 });
 
 $("#rege").on("click", function(){
-
+  alert('ggg');
       var email =  $("#email").val().trim();
   var firstName = $("#firstName").val().trim();
   var password = $("#pass").val().trim();
@@ -60,9 +60,10 @@ $("#rege").on("click", function(){
   var rank = "jjjjj";
   if ($("#m").val().trim()){  var sex = "m";}
   if ($("#f").val().trim()){  var sex = "f";}
+
   var birth = $("#birthDate").val().trim();
-  var birth = $("#phone").val().trim();
-  var organization = $("#org").val().trim();
+  var phoneNumber = $("#phone").val().trim();
+  var organisation = $("#org").val().trim();
 var data = new Object();
 data.email = email;
 data.password = password;
@@ -78,7 +79,7 @@ data = JSON.stringify(data);
    data: data,
    headers: { 'Accept': 'application/json',
    'Content-Type': 'application/json; charset=UTF-8'
-  });
+ }});
 });
 
 
