@@ -23,6 +23,9 @@ $.ajax(
   { type: "GET",
   url: adr,
   data: data,
+  headers: { 'Accept': 'application/json',
+  'Content-Type': 'application/json; charset=UTF-8',
+'X-Authorization': localStorage.getItem("token")} ,
   success: function(data2){
       co = data2.count;
   }

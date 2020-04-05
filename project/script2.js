@@ -46,7 +46,7 @@ data = JSON.stringify(data);
    data: data,
    headers: { 'Accept': 'application/json',
    'Content-Type': 'application/json; charset=UTF-8',
- 'token': localStorage.getItem("token")} ,
+ 'X-Authorization': localStorage.getItem("token")} ,
   });
 }
 });
