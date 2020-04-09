@@ -61,7 +61,7 @@ $("#rege").on("click", function(){
   var sex = "m";
   var birth = $("#birthDate").val().trim();
   var phoneNumber = $("#phone").val().trim();
-  var organisation = $("#org").val().trim();
+  var organization = $("#org").val().trim();
 var data = new Object();
 data.email = email;
 data.password = password;
@@ -71,17 +71,24 @@ data.rank = rank;
 data.sex = sex;
 data.birth = birth;
 data.phoneNumber = phoneNumber;
-data.organization = organisation;
+data.organization = organization;
 data = JSON.stringify(data);
 
-  $.ajax({ type: "POST",
-  url: "http://localhost:8080/create_user",
-   data: data,
-   headers: { 'Accept': 'application/json',
-   'Content-Type': 'application/json; charset=UTF-8'
- }});
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    url: "http://localhost:8080/create_user",
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *client
+    body: data // body data type must match "Content-Type" header
+  });
 });
-
 
 $("#exit").on("click", function(){
   localStorage.removeItem("user_id");
