@@ -47,7 +47,7 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <h7 id="hello" class="eng mr-lg-5" style="color: #fff"></h7>
-                <button class="btn btn-outline-success my-2 my-sm-0" id="exit">Выход</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" id="exit">Exit</button>
             </form>
         </div>
     </nav>
@@ -91,7 +91,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" onsubmit="return false;" novalidate>
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="form-froup">
@@ -152,7 +152,6 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="" class="nav-link" data-toggle="modal" data-target="#authorization">Log in</a>
                             <button type="submit" id="crEvent" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
@@ -171,7 +170,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" onsubmit="return false;" novalidate>
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="form-froup">
@@ -186,7 +185,7 @@
                             </div>
                             <div class="form-froup">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Password" aria-describedby="passHelp" required>
+                                    <input type="password" pattern="\D{10,}"class="form-control" id="password" placeholder="Password" aria-describedby="passHelp" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -222,7 +221,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" onsubmit="return false;" novalidate>
                     <div class="modal-body">
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
@@ -299,7 +298,7 @@
                         </div>
                         <div class="form-froup">
                             <label for="pass">Password</label>
-                            <input type="password" class="form-control" id="pass" placeholder="Password" aria-describedby="passHelp1" required>
+                            <input type="password"  pattern="\D{10,}" class="form-control" id="pass" placeholder="Password" aria-describedby="passHelp1" required>
                             <small id="passHelp1" class="form-text text-muted">Password should contain 10 symbols</small>
                             <div class="valid-feedback">
                                 Looks good!
@@ -310,7 +309,7 @@
                         </div>
                         <div class="form-froup">
                             <label for="passRepeat">Repeat password</label>
-                            <input type="password" class="form-control" id="passRepeat" placeholder="Password" aria-describedby="passHelp2" required>
+                            <input type="password"  pattern="\D{10,}" class="form-control" id="passRepeat" placeholder="Password" aria-describedby="passHelp2" required>
                             <small id="passHelp2" class="form-text text-muted">Password should contain 10 symbols</small>
                             <div class="valid-feedback">
                                 Looks good!
